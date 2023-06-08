@@ -27,6 +27,7 @@ class Product extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Apple Vision Pro',
@@ -35,7 +36,6 @@ class Product extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 30),
                         ),
-                        SizedBox(width: 10),
                         FloatingActionButton(
                           shape: CircleBorder(),
                           elevation: 0,
@@ -100,25 +100,24 @@ class Product extends StatelessWidget {
                       ],
                     ),
                     const Padding(
-                      padding: EdgeInsets.only(top: 15, bottom: 15),
+                      padding: EdgeInsets.only(top: 15, bottom: 10),
                       child: Divider(color: Colors.grey),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Already have an account?',
-                          style: TextStyle(color: Colors.grey, fontSize: 15),
+                          'Unlock free delivery',
+                          style: GoogleFonts.roboto(
+                              color: const Color(0xFF2F2F2F),
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
                         ),
-                        TextButton(
-                            onPressed: null,
-                            child: Text(
-                              "Sign In",
-                              style: TextStyle(
-                                  color: Color(0xFFFF2B13),
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold),
-                            )),
+                        Text(
+                          'from \$9/mo',
+                          style: GoogleFonts.inter(
+                              color: Colors.grey, fontSize: 15),
+                        ),
                       ],
                     ),
                   ],
